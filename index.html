@@ -399,6 +399,33 @@
     content: "👂 ";
   }
 
+  .q-follows {
+    font-size: 12.5px;
+    color: var(--text-2);
+    margin: -6px 0 14px;
+    background: #f4f7ff;
+    border-left: 3px solid #7aa6ff;
+    padding: 8px 12px 8px 12px;
+    border-radius: 6px;
+    line-height: 1.55;
+  }
+  .q-follows-label {
+    display: block;
+    font-weight: 600;
+    color: #4a6fc9;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 4px;
+  }
+  .q-follows ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+  .q-follows li {
+    margin: 2px 0;
+  }
+
   /* ---------- Rating rubric (per-question scoring guide) ---------- */
   .q-rubric {
     margin: 0 0 14px;
@@ -1553,49 +1580,65 @@
     <button class="drawer-close" onclick="closeDrawer()" aria-label="Close">✕</button>
   </div>
   <div class="drawer-body">
-    <h4>Rating scale</h4>
+    <h4>How to read the ratings</h4>
     <div class="scale-legend">
-      <div class="star-col">★</div><div><strong>1 — Poor.</strong> Major concerns, doesn't meet bar.</div>
-      <div class="star-col">★★</div><div><strong>2 — Below average.</strong> Some red flags or weak answer.</div>
-      <div class="star-col">★★★</div><div><strong>3 — Acceptable.</strong> Meets bar, no standout.</div>
-      <div class="star-col">★★★★</div><div><strong>4 — Strong.</strong> Above expectations, clear thinking.</div>
-      <div class="star-col">★★★★★</div><div><strong>5 — Exceptional.</strong> Stands out, would actively want them.</div>
+      <div class="star-col">★</div><div><strong>1 — Off.</strong> Real concern, wouldn't be a fit right now.</div>
+      <div class="star-col">★★</div><div><strong>2 — Weak.</strong> Answer felt thin or off, small yellow flag.</div>
+      <div class="star-col">★★★</div><div><strong>3 — Solid.</strong> Fine answer, didn't blow you away or worry you.</div>
+      <div class="star-col">★★★★</div><div><strong>4 — Great.</strong> Genuinely impressed, you'd happily work with them.</div>
+      <div class="star-col">★★★★★</div><div><strong>5 — Wow.</strong> Memorable, the kind you immediately want on the team.</div>
     </div>
 
-    <h4>Live interview tips</h4>
+    <h4>How to actually run it</h4>
     <ul>
-      <li><strong>Listen more than you talk.</strong> Aim for 70/30 candidate vs you.</li>
-      <li><strong>Use silence.</strong> Wait 3 seconds after they finish — best info comes here.</li>
-      <li><strong>Probe with "why".</strong> "Tell me more" beats moving on.</li>
-      <li><strong>Watch for vague answers.</strong> Ask for specific examples.</li>
-      <li><strong>Take quick notes.</strong> Score after the question, not during.</li>
-    </ul>
-
-    <h4>Red flags 🚩</h4>
-    <ul>
-      <li>Blames others for past conflicts.</li>
-      <li>Vague on time commitment.</li>
-      <li>Generic answers, no examples.</li>
-      <li>Defensive when asked about criticism.</li>
-      <li>Speaks negatively about past teams.</li>
+      <li><strong>Make them comfortable first.</strong> Smile, small talk for 1 min, then start.</li>
+      <li><strong>It's a chat, not a quiz.</strong> Skip questions if they already answered them naturally.</li>
+      <li><strong>Use the follow-up prompts.</strong> They're there to keep the convo flowing — don't read them like a script.</li>
+      <li><strong>Let silence breathe.</strong> Wait 3 seconds before jumping in. That's where the real answer lives.</li>
+      <li><strong>"Tell me more"</strong> is your most powerful line.</li>
+      <li><strong>Take quick notes</strong>, score right after each question while it's fresh.</li>
+      <li><strong>Watch the vibe.</strong> Are they warm? Closed off? Curious? It matters as much as the answers.</li>
     </ul>
 
     <h4>Green flags ✅</h4>
     <ul>
-      <li>Self-aware about weaknesses.</li>
-      <li>Specific stories with their actual role.</li>
-      <li>Honest about time they can give.</li>
-      <li>Asks thoughtful questions back.</li>
-      <li>Calm under stress questions.</li>
+      <li>Specific stories with their own role clearly named.</li>
+      <li>Self-aware — can name a real weakness without spinning it.</li>
+      <li>Honest about how much time they can actually give.</li>
+      <li>Stays calm and thoughtful on situational questions.</li>
+      <li>Asks something real about the club at the end.</li>
+      <li>Talks about past teammates with respect, even when describing problems.</li>
+      <li>Mentions small things that show they care about people (checking in, noticing quiet members).</li>
     </ul>
 
-    <h4>Verdict thresholds</h4>
+    <h4>Red flags 🚩</h4>
     <ul>
-      <li><strong>85–100:</strong> Strong Yes</li>
-      <li><strong>70–84:</strong> Yes</li>
-      <li><strong>50–69:</strong> Maybe — discuss with team</li>
-      <li><strong>Below 50:</strong> No</li>
+      <li>Blames everyone but themselves in past team stories.</li>
+      <li>"Whenever you need me" with no real number on availability.</li>
+      <li>Everything is generic — no examples, ever.</li>
+      <li>Gets visibly defensive about feedback or criticism.</li>
+      <li>Trash-talks past teams, friends, or other clubs.</li>
+      <li>Only talks about CV, certificates, recognition — no real motivation.</li>
+      <li>Zero curiosity at the end ("no questions").</li>
+      <li>Says all the "right" answers but it sounds rehearsed and empty.</li>
     </ul>
+
+    <h4>Yellow flags 🟡 (worth probing)</h4>
+    <ul>
+      <li>Strong answers but very short — push for examples.</li>
+      <li>Mentions being "very busy" multiple times.</li>
+      <li>Avoids conflict-related questions or rushes through them.</li>
+      <li>Names friends already in the club a lot — fit might be social only.</li>
+    </ul>
+
+    <h4>Final verdict — keep it human</h4>
+    <ul>
+      <li><strong>85–100 · Strong Yes:</strong> Take them, don't overthink it.</li>
+      <li><strong>70–84 · Yes:</strong> Solid fit, would add to the team.</li>
+      <li><strong>50–69 · Maybe:</strong> Talk it out with the team — could go either way.</li>
+      <li><strong>Below 50 · No:</strong> Not the right fit right now.</li>
+    </ul>
+    <p style="font-size:12px;color:var(--muted);margin-top:6px;">The score is a guide, not a verdict. Trust your gut on fit — if everyone says "yes" but no one's excited, it's probably a Maybe.</p>
   </div>
 </div>
 
@@ -1689,189 +1732,332 @@
   // for THAT specific question. Helps you rate consistently instead of guessing.
   const sections = [
     {
-      title: "Get to Know Them",
+      title: "Warm-Up",
       questions: [
-        { q: "Introduce yourself briefly, and tell me one thing you do outside uni that has nothing to do with studying.",
-          hint: "Listen for: confidence, ability to express themselves, having a life outside academics",
+        { q: "Tell me a bit about yourself — and one thing you actually enjoy doing outside of uni.",
+          hint: "Just to set the tone. Listen for: comfort, self-expression, having a life beyond classes.",
+          follows: [
+            "How did you get into that?",
+            "Do you do it alone or with friends?"
+          ],
           rubric: [
-            "Mumbles, can barely introduce self, no real interests outside study",
-            "Stiff intro, only mentions study/work, can't name a hobby",
-            "Clear intro with one generic hobby (e.g. 'watching Netflix')",
-            "Confident intro + a specific hobby they actually pursue",
-            "Engaging story-style intro, passionate hobby with details that make them memorable"
+            "Very stiff, can't get past name and major, no real interests",
+            "Short intro, only mentions studies/work, generic hobby (\"Netflix\")",
+            "Clear intro with one specific hobby they actually do",
+            "Relaxed and natural, gives a genuine hobby with a small story",
+            "Engaging, easy to talk to, you immediately get a sense of who they are"
           ] },
-        { q: "Why did you apply for the club?",
-          hint: "Listen for: genuine interest vs. CV-padding, alignment with club values",
+        { q: "How did you first hear about the club, and what made you actually apply?",
+          hint: "Looking for genuine interest vs. just following a friend or padding the CV.",
+          follows: [
+            "Did you check what the club does before applying?",
+            "Was there a specific event or post that caught your eye?"
+          ],
           rubric: [
-            "\"For my CV\" / \"my friend told me to\" — no real reason",
-            "Generic answer (\"meet people\", \"good experience\") with no specifics about the club",
-            "Mentions one specific thing about the club that drew them in",
-            "Specific reasons + has researched the club's events/activities",
-            "Personal connection to club mission, can name people/events, shows real conviction"
+            "\"A friend told me\" / \"for my CV\" with nothing else behind it",
+            "Generic (\"meet people\", \"experience\") with no link to the club specifically",
+            "One specific thing about the club drew them in",
+            "Has actually looked into the club's events/activities and can name a few",
+            "Personal connection to what we do — can name people, events, or moments that inspired them"
           ] },
-        { q: "Why HR specifically?",
-          hint: "Listen for: understanding of HR role, people-orientation, real motivation",
+        { q: "Why HR, and not another department?",
+          hint: "You're checking if they actually understand what HR does in a student club, not just the word.",
+          follows: [
+            "What do you think an HR member actually does day-to-day here?",
+            "Is there anything about HR that worries you a bit?"
+          ],
           rubric: [
-            "Doesn't know what HR does, picked it randomly",
-            "Surface-level (\"I like people\") with no understanding of the role",
-            "Basic understanding of HR — recruitment, team well-being",
-            "Understands HR scope + cites a strength of theirs that fits (organization, empathy)",
-            "Deep understanding of HR's impact, ties to values, gives examples of HR-style situations they've handled"
-          ] },
-        { q: "What kind of environment helps you work best?",
-          hint: "Listen for: self-awareness, fit with team culture",
-          rubric: [
-            "\"Anywhere is fine\" / no self-awareness",
-            "Vague answer that doesn't really describe an environment",
-            "Generic preferences (\"quiet\", \"team\") with no reasoning",
-            "Specific preferences + understands trade-offs",
-            "Deep self-awareness, knows their conditions for productivity AND can adapt when needed"
+            "No idea what HR does, picked it at random",
+            "\"I like people\" with nothing else behind it",
+            "Basic understanding — recruitment + member well-being",
+            "Solid understanding + names a personal strength that fits the role",
+            "Really gets HR's role: bonding, motivation, mediation; gives a small example of doing something HR-like already"
           ] }
       ]
     },
     {
-      title: "How They Work",
+      title: "Personality & Self-Awareness",
       questions: [
-        { q: "Do you prefer leading or supporting, and why?",
-          hint: "Listen for: honest self-assessment, flexibility, no ego trip",
+        { q: "How would your closest friends describe you in three words — and would you agree with them?",
+          hint: "Fun, low-pressure, but reveals a lot. Listen for self-awareness and honesty.",
+          follows: [
+            "Which of those words do you wish was more true about you?",
+            "Anything they'd say that you'd actually push back on?"
+          ],
           rubric: [
-            "Only wants to lead (ego) OR only wants to follow (no ownership)",
-            "Picks one without reasoning",
-            "Clear preference with basic reasoning",
-            "Can do both, has clear reasoning for each, picks based on situation",
-            "Strong self-awareness + example of switching modes mid-project"
+            "Three random buzzwords, no reflection",
+            "Lists words but can't really back them up",
+            "Three reasonable words + small justification",
+            "Honest list, agrees with most, mildly disagrees with one and explains why",
+            "Thoughtful, slightly vulnerable, clearly knows themselves"
           ] },
-        { q: "How do you usually manage your time during the semester?",
-          hint: "Listen for: real systems (planner, calendar) vs. vague answers",
+        { q: "What kind of energy do you bring to a group? Are you the planner, the mood-maker, the listener, the doer…?",
+          hint: "You're trying to picture them inside the team dynamic.",
+          follows: [
+            "Can you think of a moment that proves it?",
+            "What role do you NOT enjoy taking?"
+          ],
           rubric: [
-            "\"I just do it\" / no system / always last minute",
-            "Mentions planning but no real method",
-            "Has a basic system (to-do list, notes app)",
-            "Uses a real system (calendar/planner) consistently, plans week ahead",
-            "Detailed system with priorities + reflects/adjusts each week"
+            "\"I don't know\" / can't describe themselves in a group",
+            "Picks a role but it sounds rehearsed",
+            "Clear role with a small example",
+            "Clear role, real example, also knows what role doesn't suit them",
+            "Self-aware and flexible — adapts their role depending on who else is in the team"
           ] },
-        { q: "If you had exams and tasks at the same time, how would you handle it?",
-          hint: "Listen for: prioritization, communication, realistic planning",
+        { q: "What's something you're genuinely working on improving about yourself right now?",
+          hint: "Listen for honest reflection — not the classic \"I'm too perfectionist\" humblebrag.",
+          follows: [
+            "What made you realize this?",
+            "What's one small thing you're already doing about it?"
+          ],
           rubric: [
-            "\"I'd just do exams and ghost the team\" — no communication",
-            "Tries to do both, no plan, will burn out",
-            "Knows to prioritize but doesn't mention communicating with team",
-            "Prioritizes by deadline + tells team early + delegates if possible",
-            "Concrete plan: triage by impact, communicate proactively, has done this before successfully"
+            "\"Nothing really\" / no self-awareness",
+            "Humblebrag (\"I care too much\", \"I work too hard\")",
+            "Real but very generic weakness (\"public speaking\")",
+            "Specific weakness + an actual step they're taking",
+            "Honest, slightly personal, you can tell they've thought about it before this question"
           ] },
-        { q: "Have you been in any activity or team before? Tell me about it.",
-          hint: "Listen for: actual experience, what they took from it, contribution",
+        { q: "When you're stressed or overwhelmed, what's your go-to way of dealing with it?",
+          hint: "Personality + maturity check. Are they aware of their own limits?",
+          follows: [
+            "Do you talk to people when you're stressed, or shut down?",
+            "Has that always worked for you?"
+          ],
           rubric: [
-            "Never been in any team/activity",
-            "Was in something but can't describe what they did",
-            "Was in a team, can describe role generically",
-            "Real experience + specific contribution + lesson learned",
-            "Multiple experiences + clear growth arc + can articulate how each shaped them"
-          ] },
-        { q: "Tell me about a time you worked in a team — what was your role?",
-          hint: "Listen for: clarity of role, ownership, specific examples",
-          rubric: [
-            "Can't recall any team experience",
-            "Vague (\"I helped\"), no specific role or contribution",
-            "States their role clearly with one example",
-            "Specific role, specific actions, mentions outcome",
-            "STAR-style answer: Situation, Task, Action, Result + reflection on what they'd do differently"
-          ] },
-        { q: "What annoys you most in teamwork?",
-          hint: "Listen for: pet peeves that signal values; watch for blaming language",
-          rubric: [
-            "Goes off on a rant blaming past teammates by name",
-            "Petty / immature complaint (\"slow people\", \"loud people\")",
-            "Reasonable annoyance but blames others",
-            "Reasonable annoyance + acknowledges they also need to adapt",
-            "Mature: pet peeve tied to a value (e.g. \"unclear ownership\") + how they handle it constructively"
-          ] },
-        { q: "How do you deal with conflicts?",
-          hint: "Listen for: self-awareness, calm approach, not blaming others",
-          rubric: [
-            "Avoids them / stays silent / lets it explode",
-            "Confronts aggressively / picks sides / makes it personal",
-            "Generic \"I talk it out\" with no real method",
-            "Listens to both sides, addresses the issue not the person, stays calm",
-            "Concrete method + specific past example + reflects on what worked / didn't"
-          ] },
-        { q: "How do you react when you receive criticism?",
-          hint: "Listen for: openness, growth mindset, no defensiveness",
-          rubric: [
-            "Gets defensive / takes it personally / shuts down",
-            "Says they accept it but body language shows they don't",
-            "Accepts it but doesn't act on it",
-            "Listens, asks clarifying questions, applies feedback",
-            "Welcomes feedback, asks for it proactively, gives example of changing because of it"
-          ] },
-        { q: "What are you still working on in yourself?",
-          hint: "Listen for: genuine self-reflection vs. humblebrag (\"I work too hard\")",
-          rubric: [
-            "\"Nothing, I'm fine\" / no self-awareness",
-            "Humblebrag (\"I'm too perfectionist\", \"I care too much\")",
-            "Real but generic weakness (\"public speaking\")",
-            "Specific weakness + concrete steps they're taking to improve",
-            "Honest, vulnerable answer + visible progress + ties it to growth journey"
+            "\"I just push through\" / shuts down / bottles it",
+            "Vague (\"I rest\") with no real method",
+            "Has one coping habit (walk, music, friends)",
+            "Knows their pattern + has more than one way to reset",
+            "Mature: can name early signs of stress + has a real, healthy routine + knows when to ask for help"
           ] }
       ]
     },
     {
-      title: "Fit & Commitment",
+      title: "Commitment & Realistic Availability",
+      questions: [
+        { q: "Honestly — how many hours a week can you give the club, considering your studies and life?",
+          hint: "A vague \"whenever needed\" is a yellow flag. You want a real number with awareness.",
+          follows: [
+            "Which days are usually heavier for you?",
+            "What would you have to drop if club work suddenly spiked before an event?"
+          ],
+          rubric: [
+            "Vague (\"whenever needed\") or unrealistic (\"as much as you want\")",
+            "Random number with no thinking behind it",
+            "Believable number (3–5 hrs) but no breakdown",
+            "Realistic number + names which days/times work best",
+            "Honest number + clear weekly picture + flexibility around events and exams"
+          ] },
+        { q: "Exam season hits and the club has a big event the same week. Walk me through what you actually do.",
+          hint: "Looking for: prioritization, early communication, no ghosting.",
+          follows: [
+            "Who would you tell first, and how?",
+            "Have you been in a situation like this before?"
+          ],
+          rubric: [
+            "\"I'd disappear and focus on exams\" — no communication",
+            "Tries both, no plan, you can tell they'd burn out",
+            "Knows to prioritize but doesn't mention telling the team",
+            "Prioritizes + tells the team early + offers to delegate",
+            "Concrete plan: communicates ahead of time, hands off cleanly, comes back fully — has done it before"
+          ] },
+        { q: "What would make you actually want to stay in this club for the whole year — not just the first month?",
+          hint: "Looking for intrinsic motivation: belonging, growth, friendships — not certificates.",
+          follows: [
+            "What would make you want to leave?",
+            "Have you ever quit something halfway? Why?"
+          ],
+          rubric: [
+            "Only external (CV, certificate, recognition)",
+            "Mostly external (\"good vibes\", \"fun\") with no depth",
+            "Mix of external and personal reasons",
+            "Mostly intrinsic: friendships, learning, sense of impact",
+            "Clearly tied to growth, belonging, and being part of something bigger than themselves"
+          ] }
+      ]
+    },
+    {
+      title: "Teamwork & Communication",
+      questions: [
+        { q: "Tell me about a team experience — school project, club, sport, anything — where things actually went well. What was your part?",
+          hint: "STAR-ish answer is great. Listen for clear ownership, not \"we did it together\" only.",
+          follows: [
+            "What did YOU specifically do?",
+            "Why do you think it worked?"
+          ],
+          rubric: [
+            "Can't think of any team experience",
+            "Vague (\"I helped\") — no clear role",
+            "Clear role with one concrete example",
+            "Clear role + actions + outcome",
+            "Specific story with their part, the team's part, and what they learned about themselves"
+          ] },
+        { q: "Now flip it — a team experience that went badly. What happened, and what did you take from it?",
+          hint: "You're testing maturity. Do they blame others, or can they own a mistake?",
+          follows: [
+            "What would you do differently now?",
+            "Did you talk to anyone in the team about it afterwards?"
+          ],
+          rubric: [
+            "Blames teammates entirely, no ownership",
+            "Surface-level (\"the team was bad\") with no reflection",
+            "Acknowledges some of their own role",
+            "Honest mix: what others did + what they did + clear lesson",
+            "Mature reflection — owns their part, doesn't trash anyone, has clearly grown from it"
+          ] },
+        { q: "How do you usually react when you get criticized — even small feedback?",
+          hint: "Watch body language as much as the words.",
+          follows: [
+            "Tell me about a time someone gave you feedback that stung. What did you do with it?",
+            "Do you ever ask people for feedback yourself?"
+          ],
+          rubric: [
+            "Defensive / takes it personally / shuts down",
+            "Says they accept it but it sounds rehearsed",
+            "Accepts it but doesn't really act on it",
+            "Listens, asks questions, tries to apply it",
+            "Actively asks for feedback + can give a real example of changing because of it"
+          ] },
+        { q: "What's one thing that genuinely annoys you in a team — and how do you handle it without making it worse?",
+          hint: "Pet peeves reveal values. Watch for blaming, naming people, or pure venting.",
+          follows: [
+            "Has it actually happened? What did you do?",
+            "Could that annoyance ever be partly on you?"
+          ],
+          rubric: [
+            "Rants and names past teammates",
+            "Petty complaint (\"slow people\", \"loud people\")",
+            "Reasonable annoyance, blames others",
+            "Reasonable annoyance + admits they also need to adapt",
+            "Names a real value (\"unclear ownership\", \"silent disagreement\") + a constructive way they handle it"
+          ] }
+      ]
+    },
+    {
+      title: "Situational — The Real Stuff",
       heavy: true,
       questions: [
-        { q: "What would you do if you felt left out in the team?",
-          hint: "Listen for: maturity, communication first, not withdrawing",
+        { q: "You strongly disagree with a decision your Head or VP made about an event. What do you do?",
+          hint: "Looking for respect + courage. Not silent obedience, not public rebellion.",
+          follows: [
+            "Would you say it in front of the team or privately?",
+            "What if they still disagree after you speak up?"
+          ],
           rubric: [
-            "Would withdraw, go quiet, or quit",
-            "Would complain to others outside the team",
-            "Would try harder alone but not address it",
-            "Would talk to a teammate or lead about how they feel",
-            "Mature: would self-reflect first, then communicate openly, AND look for ways to contribute more visibly"
+            "Stays silent and resents it / OR pushes back publicly / OR vents in side-chats",
+            "Complains to friends but does nothing constructive",
+            "Goes along with it but mentions it casually later",
+            "Talks to the Head/VP privately, calmly explains their view, accepts the final decision",
+            "Mature: prepares their argument, shares it 1-on-1, fully commits to the final call even if it's not theirs, no grudge"
           ] },
-        { q: "If your team depends on you for a task and you realize you can't finish it on time, what would you do?",
-          hint: "Listen for: early communication, honesty, problem-solving — NOT excuses",
+        { q: "You notice a member who's slowly becoming isolated — quiet in the group chat, not showing up to socials. As HR, what do you do?",
+          hint: "This is core HR. Looking for empathy + action, not just \"I'd notice it\".",
+          follows: [
+            "Would you reach out publicly or privately?",
+            "What if they say they're fine but you can tell they're not?"
+          ],
           rubric: [
-            "Would hide it / go silent / show up empty-handed",
-            "Would tell the team last minute with excuses",
-            "Would tell the team but only after the deadline passes",
-            "Would tell the team early + offer a partial solution",
-            "Communicates as soon as they realize, proposes alternatives (delegate, extend, partial), owns the miss"
+            "Wouldn't notice / would assume they're just busy",
+            "Notices but doesn't act",
+            "Sends a generic \"you good?\" message",
+            "Reaches out privately, listens, suggests a low-pressure way to reconnect",
+            "Notices early + 1-on-1 check-in + finds them a small role or buddy + follows up later without making it a big deal"
           ] },
-        { q: "Imagine there's tension between two members. How would you react?",
-          hint: "Listen for: HR mindset — neutral, listens to both sides, mediates",
+        { q: "Two members are clearly not getting along. It's starting to affect the team. How do you handle it?",
+          hint: "Classic HR. Looking for neutrality + mediation, not picking sides.",
+          follows: [
+            "What if one of them is your friend?",
+            "When would you involve the Head?"
+          ],
           rubric: [
-            "Would pick a side / gossip / make it worse",
-            "Would ignore it / hope it resolves itself",
-            "Would talk to one of them but not both",
-            "Would listen to both privately + try to mediate calmly",
-            "Full HR mindset: neutral, listens to both, helps them talk to each other directly, escalates only if needed"
+            "Picks a side / gossips / makes it worse",
+            "Ignores it and hopes it resolves",
+            "Talks to one of them only",
+            "Listens to both privately, then mediates calmly",
+            "Full HR mindset: neutral, hears both sides, brings them together, escalates only if it can't be resolved"
           ] },
-        { q: "How many hours a week realistically can you give to the club?",
-          hint: "Listen for: a real number, awareness of own load — vague = red flag",
+        { q: "You're going through something heavy in your personal life and a major club event is in 3 days. What do you actually do?",
+          hint: "Honesty over heroics. You don't want \"I'd push through no matter what\".",
+          follows: [
+            "Who would you tell, and how much would you share?",
+            "Has anything like this happened to you before?"
+          ],
           rubric: [
-            "Vague (\"whenever needed\") OR unrealistic (\"40 hours\") — no awareness of their load",
-            "Gives a number but it's clearly a guess (1–2 hrs)",
-            "Gives a believable number (3–5 hrs) but no breakdown",
-            "Realistic number (5–8 hrs) + mentions how they'd fit it around studies",
-            "Honest specific number (6–10 hrs) + breakdown of which days/times + flexibility for events"
+            "\"I'd just push through\" / hides it completely",
+            "Disappears without telling anyone",
+            "Tells the team last minute with no plan",
+            "Tells the Head or HR lead early, hands off what they can, stays involved where possible",
+            "Communicates early + honest about limits + offers a clear handoff + doesn't over-share or under-share"
           ] },
-        { q: "What do you think you can add to the team?",
-          hint: "Listen for: specific strengths with examples, not generic buzzwords",
+        { q: "An event you helped plan starts going wrong mid-way — low turnout, broken schedule, something falls apart. What do you do in the moment?",
+          hint: "Looking for calm, ownership, fast decisions, no blame game.",
+          follows: [
+            "Who do you talk to first?",
+            "What's the first thing you'd fix?"
+          ],
           rubric: [
-            "\"I'm a hard worker\" / generic buzzwords with no proof",
-            "Lists traits but no examples",
-            "One specific strength with a basic example",
-            "Two or three specific strengths backed by real examples",
-            "Clear value proposition: specific skills + examples + how they fit HR specifically"
+            "Panics / freezes / starts blaming",
+            "Waits for someone else to fix it",
+            "Tries to help but in a chaotic way",
+            "Stays calm, finds the lead, suggests a quick fix",
+            "Takes initiative, calms others, makes a fast call with the team, debriefs honestly afterwards"
           ] },
-        { q: "What would make you stay motivated in a team?",
-          hint: "Listen for: intrinsic drivers, sense of belonging, growth opportunities",
+        { q: "You're given the lead of a small HR project and one of your team members just isn't pulling their weight. How do you handle it?",
+          hint: "First leadership test. Looking for direct + kind, not bossy or avoidant.",
+          follows: [
+            "Have you ever been the one not pulling their weight? What helped?",
+            "When would you escalate to the Head?"
+          ],
           rubric: [
-            "External rewards only (CV, certificate, recognition)",
-            "Mostly external (\"having fun\", \"good vibes\")",
-            "Mix of external and intrinsic",
-            "Intrinsic: belonging, learning, impact",
-            "Deep intrinsic motivation tied to growth, relationships, and contributing to something bigger"
+            "Does the work themselves silently / OR calls them out publicly",
+            "Complains about them to other members",
+            "Sends a passive-aggressive reminder",
+            "1-on-1 conversation, asks if something's going on, resets expectations",
+            "Empathetic + clear: checks if they're okay, sets a clear small next step, follows up, escalates only if pattern continues"
+          ] }
+      ]
+    },
+    {
+      title: "Ideas, Vibe & Closing",
+      questions: [
+        { q: "If you could plan one internal event just for the team — no budget limit — what would it look like?",
+          hint: "You're looking for creativity, but also for what kind of social atmosphere they value.",
+          follows: [
+            "What's the vibe — chill, hype, deep talks, competitive?",
+            "Why do you think the team would actually love it?"
+          ],
+          rubric: [
+            "No idea / shrugs",
+            "Generic answer (\"a dinner\", \"a trip\") with no thought",
+            "One clear idea with basic reasoning",
+            "Concrete idea + clear vibe + why it fits this team",
+            "Original, well-thought idea + understands group dynamics + ties it to bonding/morale"
+          ] },
+        { q: "What's one small thing that, in your experience, makes a team feel close — beyond just doing tasks together?",
+          hint: "Tests their HR instincts. Bonus if they mention small rituals, inside jokes, check-ins.",
+          follows: [
+            "Have you seen this work somewhere before?",
+            "What kills team vibe the fastest, in your opinion?"
+          ],
+          rubric: [
+            "\"Just hanging out\" with no real insight",
+            "Generic (\"good communication\")",
+            "One real thing (e.g. shared meals, group chats)",
+            "Specific small rituals + why they matter",
+            "Mature take: small consistent rituals, individual check-ins, celebrating small wins — clearly thinks like an HR"
+          ] },
+        { q: "Last one — anything you'd like to ask US about the club, the team, or what you'd be doing?",
+          hint: "Quality of their question matters more than quantity. No question = low curiosity.",
+          follows: [
+            "What made you curious about that?",
+            "Anything you're nervous about if you join?"
+          ],
+          rubric: [
+            "\"No, I'm good\" / no curiosity at all",
+            "One generic question (\"when do we start?\")",
+            "One real question about the club or team",
+            "Thoughtful question that shows they've been listening the whole interview",
+            "Asks something that genuinely makes the interviewers think — clearly invested already"
           ] }
       ]
     }
@@ -1931,6 +2117,11 @@
           </div>
           <div class="q-text">${escapeHtml(qItem.q)}</div>
           <div class="q-hint">${escapeHtml(qItem.hint)}</div>
+          ${Array.isArray(qItem.follows) && qItem.follows.length ? `
+          <div class="q-follows">
+            <span class="q-follows-label">↪ Follow-up prompts</span>
+            <ul>${qItem.follows.map(f => `<li>${escapeHtml(f)}</li>`).join("")}</ul>
+          </div>` : ""}
           ${qItem.rubric ? `
           <details class="q-rubric">
             <summary>📏 Rating guide — click to see what 1–5 looks like for this question</summary>
